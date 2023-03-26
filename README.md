@@ -1,17 +1,31 @@
-# vue-cours-metaux
+# Vue Cours des métaux précieux
 
-## Project setup
-```
+Projet Simple d'affichage des cours des métaux précieux.
+
+![](docs/app.png)
+![](docs/calc.png)
+
+## Installation des dépencances
+```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
+## Configuration
+
+Copiez et renommez le fichier **.env** en **.env.local** et saisissez y la clé API de *metals-api.com*.
+
+https://www.metals-api.com/
+![](.doc/metalsapi.png)
+
+
+## Lancement en local
+```bash
 npm run serve
 ```
+![](docs/npmserve.png)
 
-### Compiles and minifies for production
-```
+## Compilation pour distribution
+```bash
 npm run build
 ```
 
