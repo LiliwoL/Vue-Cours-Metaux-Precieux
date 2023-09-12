@@ -19,12 +19,11 @@
 					@click="setData(index, rate)"
 					>
 					<!-- Mise à jour de dataEncours au clic -->
-
 						<div class="font-semibold text-sm sm:text-base items-center">
 							{{ convertMetalsTerms( index ) }}
 						</div>
 						<div class="text-right">
-							{{ formatEuro( convertOunceToGram( rate )) }} / g
+							{{ formatEuro( convertTroyOunceToGram( rate )) }} / g
 						</div>
 
 				</li>
@@ -56,9 +55,9 @@ export default {
           },
 
           // API EndPoint
-          api_key: process.env.VUE_APP_API_KEY,
+          api_key:      process.env.VUE_APP_API_KEY,
           api_endpoint: process.env.VUE_APP_API_ENDPOINT,
-          api_options: process.env.VUE_APP_API_OPTIONS
+          api_options:  process.env.VUE_APP_API_OPTIONS
         };
     },
     /**
@@ -74,7 +73,7 @@ export default {
           this.api_endpoint + this.api_key + this.api_options,
 
           // LOCAL
-          //"metas.json",
+          //"metals.json",
           {
               headers: {
               //'Content-Type': 'application/json'
@@ -89,6 +88,7 @@ export default {
         })
         .then(data => {
             //console.log(data);
+
             // Mise à jour des data
             this.date = new Date(data.timestamp * 1000);
             this.rates = data.rates;
@@ -99,8 +99,8 @@ export default {
         })
         .catch(error => {
             console.log("Erreur de récupération API " + error);
-            console.log("Tentative de récupération LocalStorage");
 
+            console.log("Tentative de récupération LocalStorage");
             this.date = new Date( window.localStorage.getItem('metal-rates-date') );
             this.rates = JSON.parse(window.localStorage.getItem('metal-rates'));
         });

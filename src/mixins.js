@@ -9,11 +9,17 @@ export default {
             // 1 once = 28.349 grammes
             return (n / 28.349);
         },
+        convertTroyOunceToGram(value) {
+            // Conversion en nombre
+            let n = parseFloat(value);
+            // 1 once troy = 31,103 grammes
+            return (n * 31.103);
+        },
         formatEuro(amount) {
             // Conversion en nombre
             let n = parseFloat(amount);
             // Arrondi à 2 décimales
-            return n.toFixed(2) + " €";
+            return n.toFixed(5) + " €";
         },
         convertMetalsTerms(term) {
             let value = "";

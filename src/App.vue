@@ -1,14 +1,14 @@
 <template>
-  <MetalTranding></MetalTranding>
+  <MetalTrending></MetalTrending>
 </template>
 
 <script>
-import MetalTranding from './components/MetalTrending.vue'
+import MetalTrending from './components/MetalTrending.vue'
 
 export default {
   name: 'App',
   components: {
-    MetalTranding
+    MetalTrending
   }
 }
 </script>

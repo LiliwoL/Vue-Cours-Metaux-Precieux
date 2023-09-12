@@ -12,10 +12,10 @@ npm install
 
 ## Configuration
 
-Copiez et renommez le fichier **.env** en **.env.local** et saisissez y la clé API de *metals-api.com*.
+Copiez et renommez le fichier **.env** en **.env.local** et saisissez y la clé API de *https://metalpriceapi.com*.
 
-https://www.metals-api.com/
-![](readme_docs/metalsapi.png)
+https://metalpriceapi.com
+![](readme_docs/metalsapi.png)np
 
 ### Sous répertoire de l'application
 
