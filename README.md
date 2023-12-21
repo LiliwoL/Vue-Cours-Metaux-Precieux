@@ -13,7 +13,13 @@ Projet Simple d'affichage des cours des métaux précieux.
     * [Customize configuration](#customize-configuration)
 <!-- TOC -->
 
-## Installation des dépencances
+## Pré-requis
+
+- Node.JS
+- npm
+- Vue
+
+## Installation des dépendances
 ```bash
 npm install
 ```

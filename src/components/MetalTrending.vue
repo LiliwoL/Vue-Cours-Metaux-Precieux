@@ -68,18 +68,21 @@ export default {
      */
     mounted() {
         fetch(
-          // Metal API
-          //'https://metals-api.com/api/latest?access_key=8lvtb51iqxxnax4a1c5wn4povkluqau33v7311zyfpi8zwxlgd9l58ze98wu&base=EUR&symbols=XAU,XAG,XPD,XPT,XRH',
+            // Metal Price API
+            //https://api.metalpriceapi.com/v1/latest?api_key=XXXXXXXXX&base=EUR&currencies=XAU,XAG,XPD,XPT,XRH
+            // Metal API
+            //https://metals-api.com/api/latest?access_key=XXXXXXXXXXXXXXXX&base=EUR&symbols=XAU,XAG,XPD,XPT,XRH
+
           this.api_endpoint + this.api_key + this.api_options,
 
-          // LOCAL
-          //"metals.json",
+            // LOCAL (en cas de dépassement du nombre de requêtes)
+            //"metals.json",
           {
-              headers: {
-              //'Content-Type': 'application/json'
-              // like application/json or text/xml
-              }
-          }
+                headers: {
+                  //'Content-Type': 'application/json'
+                  // like application/json or text/xml
+                }
+            }
         )
         .then(response => {
             //console.log(response);
